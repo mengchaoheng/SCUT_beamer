@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{简介}{3}{0}{1}
+\beamer@sectionintoc {2}{预备知识}{6}{0}{2}
+\beamer@sectionintoc {3}{解决方法}{14}{0}{3}
+\beamer@sectionintoc {4}{结果}{21}{0}{4}
+\beamer@sectionintoc {5}{结论}{30}{0}{5}
