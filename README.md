@@ -2,6 +2,11 @@
 
 本模版用于撰写华南理工大学答辩幻灯片。答辩时播放pdf文件即可。也可以用于其他用途的幻灯片。
 
+![image](ppt.png)
+![image](ppt1.png)
+![image](ppt2.png)
+![image](ppt3.png)
+![image](ppt3.png)
 ## 快速使用：
 1.编译之前首先安装[texlive](https://www.tug.org/texlive/)，找到对应系统（Linux，win，macOS）的版本。注意macOS是MacTeX。
 
