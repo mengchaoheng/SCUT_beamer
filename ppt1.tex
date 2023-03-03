@@ -1,0 +1,25 @@
+\documentclass{beamer}
+\usetheme[sectionpage=none, progressbar=frametitle, numbering=fraction]{metropolis}        % Use metropolis theme  
+\title{Title}
+\date{\today}
+\author{Author}
+\institute{Title}
+
+% logo of my university
+%\titlegraphic{\includegraphics[width=2cm]{logo1.jpg}} 
+% logo of my university
+\titlegraphic{%
+	\begin{picture}(0,0)
+		\put(305,-120){\makebox(0,0)[rt]{\includegraphics[width=4cm]{logo1.jpg}}}
+\end{picture}}
+
+\AtBeginSection[]{
+	\begin{frame}{Talk Overview}
+		\tableofcontents[currentsection]
+	\end{frame}
+	\frame{\sectionpage}
+}
+
+\begin{document}
+	\maketitle
+\end{document}

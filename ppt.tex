@@ -19,6 +19,7 @@
 
 \usepackage{ctex}
 
+\usepackage{textpos}
 %% 根据需要修改中文字体
 \setCJKmainfont[ItalicFont={SimSun}]{SimSun}
 % \setCJKsansfont{Microsoft YaHei}
@@ -45,65 +46,71 @@
 	
 	% The Beamer class comes with a number of default slide themes which change the colors and layouts of slides. Below this is a list of all the themes, uncomment each in turn to see what they look like.
 	%
-	%\usetheme{default}
-	%\usetheme{AnnArbor}
-	%\usetheme{Antibes}
-	%\usetheme{Bergen}
-	%\usetheme{Berkeley}
-	%\usetheme{Berlin}
-	%\usetheme{Boadilla}
-	%\usetheme{CambridgeUS}
-	%\usetheme{Copenhagen}
-	%\usetheme{Darmstadt}
-	%\usetheme{Dresden}
-	%\usetheme{Frankfurt}
-	%\usetheme{Goettingen}
-	%\usetheme{Hannover}
-	%\usetheme{Ilmenau}
-	%\usetheme{JuanLesPins}
-	%\usetheme{Luebeck}
+%\usecolortheme{beaver}
+%	\usetheme{default}
+%	\usetheme{AnnArbor}
+%	\usetheme{Antibes}
+%	\usetheme{Bergen}
+%	\usetheme{Berkeley}
+%	\usetheme{Berlin}
+%	\usetheme{Boadilla}
+%	\usetheme{CambridgeUS}
+%	\usetheme{Copenhagen}
+%	\usetheme{Darmstadt}
+%	\usetheme{Dresden}
+%	\usetheme{Frankfurt}
+%	\usetheme{Goettingen}
+%	\usetheme{Hannover}
+%	\usetheme{Ilmenau}
+%	\usetheme{JuanLesPins}
+%	\usetheme{Luebeck}
 	\usetheme{Madrid}
-	%\usetheme{Malmoe}
+%	\usetheme{Malmoe}
 	%\usetheme{Marburg}
-	%\usetheme{Montpellier}
-	%\usetheme{PaloAlto}
-	%\usetheme{Pittsburgh}
+%	\usetheme{Montpellier}
+%	\usetheme{PaloAlto}
+%	\usetheme{Pittsburgh}
 	%\usetheme{Rochester}
-	%\usetheme{Singapore}
-	%\usetheme{Szeged}
+%	\usetheme{Singapore}
+%	\usetheme{Szeged}
 	%\usetheme{Warsaw}
 	
 	% As well as themes, the Beamer class has a number of color themes
 	% for any slide theme. Uncomment each of these in turn to see how it
 	% changes the colors of your current slide theme.
 	
-	%\usecolortheme{albatross}
-	%\usecolortheme{beaver}
-	%\usecolortheme{beetle}
-	%\usecolortheme{crane}
-	%\usecolortheme{dolphin}
-	%\usecolortheme{dove}
-	%\usecolortheme{fly}
-	%\usecolortheme{lily}
-	%\usecolortheme{orchid}
-	%\usecolortheme{rose}
-	%\usecolortheme{seagull}
-	%\usecolortheme{seahorse}
-	%\usecolortheme{whale}
-	%\usecolortheme{wolverine}
+%	\usecolortheme{albatross}
+%	\usecolortheme{beaver}
+%	\usecolortheme{beetle}
+%	\usecolortheme{crane}
+%	\usecolortheme{dolphin}
+%	\usecolortheme{dove}
+%	\usecolortheme{fly}
+%	\usecolortheme{lily}
+%	\usecolortheme{orchid}
+%	\usecolortheme{rose}
+%	\usecolortheme{seagull}
+%	\usecolortheme{seahorse}
+%	\usecolortheme{whale}
+%	\usecolortheme{wolverine}
 	
 	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-	\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+%	\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 	
 	\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 %\usepackage{bookman} % the used font
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-
+%\usepackage{pgf}  
 
 \newcommand{\omegab}{{\vo{\omega}}}
 \newcommand{\vo}[1]{\boldsymbol{#1}}
+
+
+% 设置logo
+%\pgfdeclareimage[width=3cm]{university-logo}{logo1.jpg} %[height=2cm, width=2cm]
+%\logo{\pgfuseimage{university-logo}}
 
 
 %----------------------------------------------------------------------------------------
@@ -117,8 +124,9 @@
 
 \author[蒙超恒] % (optional, for multiple authors)
 {蒙超恒 }
+%\author[The author]{\includegraphics[width=2cm]{logo1}\\The Author}
 
-\institute[VFU] % (optional)
+\institute[SCUT] % (optional)
 {
 %	\inst{1}%
 	华南理工大学 \\
@@ -127,11 +135,18 @@
 	
 }
 
-\date[课堂讨论]% (optional)
+\date[2022年11月]% (optional)
 {2022年11月，课堂讨论}
 
-%\logo{\includegraphics[height=0.5cm]{logo.png}}
 
+\logo{\includegraphics[height=0.6cm]{logo1}}
+
+%\logo{\pgfputat{\pgfxy(9.45,1.5)}{\pgfbox[center,base]{\includegraphics[width=1.7cm]{logo1.jpg}}}} 
+
+%\titlegraphic{%
+%	\begin{picture}(0,0)
+%		\put(305,-120){\makebox(0,0)[rt]{\includegraphics[width=2cm]{logo1.jpg}}}
+%\end{picture}}
 %----------------------------------------------------------------------------------------
 %	Highlight the title of the current section
 %----------------------------------------------------------------------------------------
@@ -149,7 +164,8 @@
 %	All pages in the slides
 %----------------------------------------------------------------------------------------
 \begin{document}
-	
+	% no page #, no logo on title page
+
 	% insert title page---------------------------
 	\frame{\titlepage}
 	
@@ -158,7 +174,10 @@
 		\frametitle{目录}
 		\tableofcontents
 	\end{frame}
-	
+%	\addtobeamertemplate{frametitle}{}{%
+%	\begin{textblock*}{100mm}(0.75\textwidth,-0.75cm)
+%		\includegraphics[width=3cm]{logo1}
+%	\end{textblock*}}
 	\section{简介}
 	
 	\begin{frame}

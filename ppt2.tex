@@ -1,0 +1,19 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+\title{The title}
+\author[The author]{\includegraphics[height=1cm,width=2cm]{cat}\\The Author}
+\institute[Inst.]{The Institute}
+\date{\today}
+\begin{document}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	\addtobeamertemplate{frametitle}{}{%
+	\begin{textblock*}{100mm}(.75\textwidth,-0.8cm)
+			\includegraphics[width=3cm]{logo1}
+	\end{textblock*}}
+	\begin{frame}{Motivation}
+		Now the logo is visible\end{frame}
+\end{document}
