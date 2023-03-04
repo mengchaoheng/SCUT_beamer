@@ -8,7 +8,7 @@
 ![image](ppt3.png)
 ![image](ppt3.png)
 ## 快速使用：
-1.编译之前首先安装[texlive](https://www.tug.org/texlive/)，找到对应系统（Linux，win，macOS）的版本。注意macOS是MacTeX。
+1.编译之前首先安装[texlive](https://www.tug.org/texlive/)，找到对应系统（Linux，win，macOS）的版本。注意macOS是MacTeX。安装[TeXstudio](https://www.texstudio.org/)或者其他编辑器。
 
 2.在`TeXstudio的Options->Configure TeXstudio->build`中，编译器(Dufault Compiler)选择`XeLaTeX`，默认文献工具(Default Bibliography Tool)选`Biber`或者`BibTeX`，取决于参考文献使用的包，没有参考文献时使用默认即可。
 
