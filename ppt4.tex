@@ -1,0 +1,177 @@
+%声明文档类型和比例
+\documentclass[aspectratio=169, 10pt, utf8, mathserif]{beamer}
+%调用相关的宏包
+\usepackage{ctex}
+\usepackage{amsmath, amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol} %分栏
+\usepackage{booktabs} %表格功能包
+\usepackage{multirow} %合并多行表格
+\usepackage{enumerate} %有序编号
+\usepackage{listings} %代码包
+\usepackage{xcolor} %代码高亮包
+\lstset{
+	language=Matlab, %代码语言使用的是matlab
+	frame=shadowbox, %把代码用带有阴影的框圈起来
+	rulesepcolor=\color{red!20!green!20!blue!20}, %代码块边框为淡青色
+	keywordstyle=\color{blue}\bfseries, %代码关键字的颜色为蓝色，粗体
+	commentstyle=\color{red}\textit, %设置代码注释的颜色
+	showstringspaces=false, %不显示代码字符串中间的空格标记
+	numbers=left, %显示行号
+	numberstyle=\tiny, %行号字体
+	stringstyle=\ttfamily, %代码字符串的特殊格式
+	breaklines=true, %过长的代码自动换行
+	extendedchars=false,  %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+	escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*} %防止中文报错
+	texcl=true}
+
+\usetheme{Antibes} %主题包之一，直接换名字即可
+\usecolortheme{beaver} %主题色之一，直接换名字即可。
+\usefonttheme{professionalfonts}
+
+% 设置用acrobat打开就会全屏显示
+\hypersetup{pdfpagemode=FullScreen}
+
+% 设置logo
+\pgfdeclareimage[width=3cm]{university-logo}{logo1.jpg} %[height=2cm, width=2cm]
+\logo{\pgfuseimage{university-logo}}
+
+%--------------正文开始---------------
+\begin{document}
+	
+	%每个章节都有小目录
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+	
+	\title{Beamer 入门}
+	\subtitle{利用已有主题实现自己的主题}
+	\author[120701101]{120701101 \\ \small \href{mailto:183xxxxx30@163.com}{183xxxxxx530@.com}}
+	\institute[公众号：120701101]
+	{
+		科学计算 \\
+		MATLLAB和Python
+	}
+	\date{\today}
+	\begin{frame}
+		%\maketitle
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{使用已有主题的方法}
+	\subsection{主题样式颜色}
+	\begin{frame}
+		\frametitle{使用已有主题的方法}
+		可以直接点击该链接\underline{\href{https://mpetroff.net/files/beamer-theme-matrix/}{已有的主题样式和主题颜色}}。
+		横栏表示主题颜色，纵栏表示主题样式。\\
+		将想套用的主题样式和颜色放到usetheme{Szeged}和usecolortheme{beaver}中即可。
+	\end{frame}
+	
+	\section{公式及编号}
+	\subsection{带编号的公式}
+	\begin{frame}
+		\frametitle{带编号的公式}
+		现在展示一个带编号的公式：
+		\begin{equation}
+			f(x) = \frac{\mathrm e^{2x}}{\sin x}
+		\end{equation}
+	\end{frame}
+	
+	\subsection{不带编号的公式}
+	\begin{frame}
+		\frametitle{不带编号的公式}
+		另外再展示一个不带编号的公式。
+		\[
+		\mathrm e^{\mathrm i \pi} + 1 = 0 
+		\]
+	\end{frame}
+	
+	\subsection{行内公式}
+	\begin{frame}
+		\frametitle{行内公式}
+		以及一个行内公式$a^2 + b^2 = c^2$.
+	\end{frame}
+	
+	\section{列表环境}
+	\subsection{无序列表和逐条展示的功能}
+	\begin{frame}
+		\frametitle{列表}
+		这是无序列表的样式，及逐条展示的功能。
+		\begin{itemize}
+			\item 无序列表标号1
+			\pause
+			\item 无序列表标号2
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{有序列表}
+	\begin{frame}
+		\frametitle{有序列表}
+		这是有序列表的样式及一次性的逐条展示功能。
+		\begin{enumerate}[<+-|alert@+>]
+			\item 这是1
+			\item 这是2
+		\end{enumerate}
+	\end{frame}
+	
+	\section{块环境}
+	\subsection{放某些特定的句子和公式}
+	\begin{frame}
+		\frametitle{块环境}
+		\begin{block}{Beamer介绍}
+			Beamer是\LaTeX 的一个文档类，主要用于学术报告幻灯片的制作，优点是跨平台性好，支持Windows，Mac等。导出的格式就是PDF。
+		\end{block}
+		\begin{block}{Beamer介绍}
+			\begin{equation}
+				\left \{
+				\begin{aligned}
+					f(x) &= 2x + b \\
+					g(x) &= x + 9
+				\end{aligned}	
+				\right.
+			\end{equation}
+		\end{block}
+		
+	\end{frame}
+	
+	\section{图文并排}
+	\begin{frame}
+		\frametitle{左图右文字}
+		\begin{columns}
+			\column{.3\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=3cm]{logo1}
+			\end{figure}
+			\column{.7\textwidth}
+			\begin{itemize}
+				\item 公众号：120701101的Logo。
+				\item 我利用矩阵的形状来模拟这些我喜欢的数字组合。
+				\item 因为是非矢量图，所以放大后有损。
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\section{代码环境}
+	\begin{frame}[fragile] %must using [fragile]
+		\frametitle{MATLAB代码}  
+		\begin{lstlisting}[numbers=left, firstnumber=753]
+			% 绘制图形
+			x = 1 : 0.01 : 5;
+			y = sin(x);
+			plot(x, y)
+		\end{lstlisting}
+	\end{frame}
+	
+	\begin{frame}
+		\zihao{-4}\centering{坚持学习，不是为了输赢。}
+	\end{frame}
+\end{document}
