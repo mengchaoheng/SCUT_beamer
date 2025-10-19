@@ -2,7 +2,7 @@
 
 本模板尝试将beamer提供的标准主题用于撰写带华南理工大学logo的幻灯片。最后使用时播放pdf文件即可。也可以用于其他用途的幻灯片。
 
-注意这只是抛砖引玉的模板，只有封面，因为具体的使用命令已经由内置的beamer文档类做完了，很多内置命令需要学习才能使用，当然也不难。可以参考[博士开题答辩应用](https://github.com/woshisangea/SCUT_CN_beamer)使用。
+注意这只是抛砖引玉的模板，只有封面，因为具体的使用命令已经由内置的beamer文档类做完了，很多内置命令需要学习才能使用，当然也不难。可以参考[博士开题答辩应用](https://github.com/mengchaoheng/SCUT_CN_beamer)使用。
 
 ![image](ppt.png)
 ![image](ppt1.png)
@@ -17,9 +17,9 @@
 3.编译ppt*.tex即可。有几种风格可选，可以试着分别编译ppt.tex、ppt1.tex、ppt2.tex、ppt3.tex挑选自己喜欢的风格。其他IDE也可以。也可以自定义风格，欢迎推pr。
 
 ## 使用案例
-[KalmanPresentation](https://github.com/woshisangea/KalmanPresentation)；英文版，随手制作的案例。
+[KalmanPresentation](https://github.com/mengchaoheng/KalmanPresentation)；英文版，随手制作的案例。
 
-[博士开题答辩应用](https://github.com/woshisangea/SCUT_CN_beamer)：中文版。似乎默认模板的字体字号不是很理想。
+[博士开题答辩应用](https://github.com/mengchaoheng/SCUT_CN_beamer)：中文版。似乎默认模板的字体字号不是很理想。
 ## 学校logo
 
 还需要进一步完善，可以自定义喜欢的图案。
